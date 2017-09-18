@@ -1,0 +1,25 @@
+{
+    "name" : "ca",
+    "components" : [
+        {
+            "module": "caf_iot#plug_ca",
+            "name": "iot",
+            "description": "Manages an IoT device for this CA.",
+            "env" : {
+                "maxRetries" : "$._.env.maxRetries",
+                "retryDelay" : "$._.env.retryDelay",
+                "marginInMsec": "process.env.MARGIN_IN_MSEC||2000"
+            },
+            "components" : [
+                {
+                    "module": "caf_iot#proxy",
+                    "name": "proxy",
+                    "description": "Provides access to an IoT device.",
+                    "env" : {
+
+                    }
+                }
+            ]
+        }
+    ]
+}

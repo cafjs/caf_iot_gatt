@@ -1,0 +1,34 @@
+{
+    "name": "top",
+    "env" : {
+        "appPublisher" :"process.env.APP_PUBLISHER||root",
+        "appLocalName" : "process.env.APP_LOCAL_NAME||hellogatt",
+        "appSuffix" : "process.env.APP_SUFFIX||vcap.me",
+        "interval": 1000
+     },
+    "components": [
+        {
+            "name": "log",
+            "env" : {
+                "logLevel" : "DEBUG"
+            }
+        },
+        {
+            "name": "security",
+            "module": null
+        },
+        {
+            "name": "cp2"
+        },
+        {
+            "name" : "iot",
+            "module": "caf_iot#plug",
+            "description": "Access to an IoT device",
+            "env": {
+                "iotMethodsFileName" : "../hello/iot/iot_methods.js",
+                "iotDeviceManagerAppURL" :"process.env.IOT_DEVICE_MANAGER_APP_URL||https://root-gadget.cafjs.com",
+                "appDir" : null
+            }
+        }
+    ]
+}
