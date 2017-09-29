@@ -1,7 +1,7 @@
 {
     "name": "caf_iot_gatt",
     "description": "Cloud Assistant library to access Bluetooth GATT services.",
-    "version": "0.2.1",
+    "version": "0.2.3",
     "author": "Antonio Lain <antlai@cafjs.com>",
     "dependencies": {
         "noble": "^1.8.1",
