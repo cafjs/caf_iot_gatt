@@ -1,16 +1,17 @@
 {
     "name": "caf_iot_gatt",
     "description": "Cloud Assistant library to access Bluetooth GATT services.",
-    "version": "0.2.8",
+    "version": "0.3.0",
     "author": "Antonio Lain <antlai@cafjs.com>",
     "dependencies": {
         "noble": "sandeepmistry/noble#8055bc4",
-        "caf_iot" : "^0.2.0"
+        "bluetooth-hci-socket": "^0.5.1",
+        "caf_iot" : "^0.3.0"
     },
     "devDependencies": {
-        "eslint": "3.1.X",
+        "eslint": "^3.1.1",
         "nodeunit" : ">=0.9",
-        "caf_core" : "^0.2.0",
+        "caf_core" : "^0.3.0",
         "jsdoc": "^3.4.2"
     },
     "main": "index",
