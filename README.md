@@ -22,7 +22,8 @@ A library to access Bluetooth GATT services from an IoT device, or a browser usi
             "description": "Access BLE GATT services.",
             "env" : {
                 "maxRetries" : "$._.env.maxRetries",
-                "retryDelay" : "$._.env.retryDelay"
+                "retryDelay" : "$._.env.retryDelay",
+                "findCharactTimeout" : "process.env.FIND_CHARACT_TIMEOUT||1000"
             },
             "components" : [
                 {

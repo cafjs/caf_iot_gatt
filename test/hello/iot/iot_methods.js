@@ -42,10 +42,17 @@ exports.methods = {
 
     findCharacteristics: function(chId, cb) {
         this.state.lastChId = chId;
+        var self = this;
         this.$.gatt.findCharacteristics(this.state.lastServiceId,
                                         this.scratch.lastDevice,
-                                        '__iot_foundCharac__');
-        cb(null);
+                                        function(err, result) {
+                                            if (err) {
+                                                cb(err);
+                                            } else {
+                                                self.__iot_foundCharac__(result,
+                                                                         cb);
+                                            }
+                                        });
     },
 
     read: function(cb) {
@@ -92,8 +99,9 @@ exports.methods = {
         this.state.values[charact.uuid] = value;
         cb(null);
     },
-    __iot_foundCharac__: function(service, device, chArray, cb) {
+    __iot_foundCharac__: function(result, cb) {
         var self = this;
+        var chArray = result.characteristics;
         chArray = chArray || [];
         console.log('*** FOUND CHARACTERISTIC ' + chArray);
         chArray.some(function(x) {
@@ -101,7 +109,7 @@ exports.methods = {
                 self.scratch.lastCh = x;
                 return true;
             } else {
-                console.log(x.uuid)
+                console.log(x.uuid);
                 return false;
             }
         });
