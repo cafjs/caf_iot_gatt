@@ -1,10 +1,10 @@
-# CAF (Cloud Assistant Framework)
+# Caf.js
 
 Co-design permanent, active, stateful, reliable cloud proxies with your web app or gadget.
 
-See http://www.cafjs.com
+See https://www.cafjs.com
 
-## CAF BLUETOOTH GATT
+## Library for Bluetooth GATT Services
 
 A library to access Bluetooth GATT services from an IoT device, or a browser using the Web Bluetooth API (Chrome).
 
