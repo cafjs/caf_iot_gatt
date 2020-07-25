@@ -12,6 +12,7 @@ The  copyright of the original `CAF` project is assigned to `Hewlett-Packard Dev
  - Support iOS with the WebBLE app.
  - Fix noble dependency to avoid util.promisify missing (browserify)
  - Customize GATT "write without response"
+ - Do not rediscover services if it was done recently
 
 ## 0.4.0
  - Add new copyright to simplify third-party contributions
