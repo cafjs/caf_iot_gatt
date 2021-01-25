@@ -37,7 +37,7 @@ exports.methods = {
 
     findServices: function(serviceId, cb) {
         this.state.lastServiceId = serviceId;
-        this.$.gatt.findServices(serviceId, '__iot_foundService__');
+        this.$.gatt.findServices(serviceId, '__iot_foundService__', null);
         cb(null);
     },
 
