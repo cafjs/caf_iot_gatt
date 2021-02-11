@@ -15,7 +15,7 @@ A library to access Bluetooth GATT services from an IoT device, or a browser usi
 ## Configuration Example
 
 ### iot.json
-
+```
     {
             "module": "caf_iot_gatt#plug_iot",
             "name": "gatt",
@@ -36,7 +36,7 @@ A library to access Bluetooth GATT services from an IoT device, or a browser usi
                 }
             ]
     }
-
+```
 ## Debugging Web Bluetooth API on Chrome
 
 The Web Bluetooth API is only available with `https` or a `localhost` address, and it will not work with our usual `http://*.vcap.me` local address.
@@ -52,7 +52,7 @@ Therefore, a hack to get Web Bluetooth API to work in local mode is as follows:
 -Run your app locally as usual, spawn the window with Bluetooth code. It will have an address of the form `http://root-<app>.vcap.me/...&token=...`
 
 -Replace `vcap.me` by `localhost:3003` in the Chrome address bar and reload. Leave the rest of the URL as it is, e.g.:
-
+```
     http://root-<app>.localhost:3003/... &token=...
-
+```
 And now Web Bluetooth is working!
