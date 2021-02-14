@@ -8,6 +8,13 @@ See https://www.cafjs.com
 
 A library to access Bluetooth GATT services from an IoT device, or a browser using the Web Bluetooth API (Chrome).
 
+## Dependencies Warning
+
+To eliminate expensive dependencies for apps in the workspace that do not need `caf_iot_gatt`, the packages `@abandonware/noble@^1.9.2-7`, `readable-stream@^2.3.7`, and `@abandonware/bluetooth-hci-socket@^0.5.3-1`have been declared as optional dependencies even though they are always needed.
+
+Applications that depend on `caf_iot_gatt` should also include these dependencies in package.json as normal dependencies.
+
+
 ## API
 
     lib/proxy_iot_gatt.js
