@@ -3,7 +3,7 @@
     "env" : {
         "appPublisher" :"process.env.APP_PUBLISHER||root",
         "appLocalName" : "process.env.APP_LOCAL_NAME||hellogatt",
-        "appSuffix" : "process.env.APP_SUFFIX||vcap.me",
+        "appSuffix" : "process.env.APP_SUFFIX||localtest.me",
         "interval": 1000
      },
     "components": [

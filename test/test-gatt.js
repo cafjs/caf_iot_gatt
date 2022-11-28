@@ -65,7 +65,7 @@ module.exports = {
         var s;
         async.series([
             function(cb) {
-                s = new cli.Session('http://root-hellogatt.vcap.me:3000',
+                s = new cli.Session('http://root-hellogatt.localtest.me:3000',
                                     CA_NAME, {from: CA_NAME,
                                               log: function(x) {
                                                   console.log(x);
